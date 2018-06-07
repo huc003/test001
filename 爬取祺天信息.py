@@ -3,9 +3,14 @@ import re
 import json
 import time
 
+#头部信息
+headers = {
+    'User-Agent':'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36'
+}
+
 #爬取祺天网页信息
 def get_qtyd_page(url):
-    response = requests.get(url)
+    response = requests.get(url,headers=headers)
     if response.status_code==200:
         return response.text
 
