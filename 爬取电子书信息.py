@@ -39,7 +39,7 @@ def get_download(id):
 #482mysql
 #300ajax
 #18javascript
-type = 300
+type = 152
 def main(page,type):
     url = "http://www.jb51.net/books/list"+str(type)+"_"+str(page)+".html"
     html = get_jb51_page(url)
